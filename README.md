@@ -1,3 +1,15 @@
+# Angular-student-management
+
+View a list of all students along with their details, including student ID, name, class, division, and subject grades.
+Filter students based on their class or division using a search feature.
+Add new students by entering their name, class, and division.
+Update student information by editing their name, class, or division.
+Record subject grades for each student, including subjects such as Math, English, Science, etc.
+Calculate overall grades for each student based on their subject grades.
+View and analyze student performance based on their grades.
+
+
+
 # Student
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
