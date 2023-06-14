@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <form>
+                <div class="form-group">
+                    <h1>Update Subject</h1>
+                    <label for="uid" class="form-label">Enter Subject ID:</label>
+                    <input type="number" placeholder="Enter Id" [(ngModel)]="uid" name="uid"
+                        class="form-control"><br><br>
+
+                    <label for="uSubName" class="form-label">Enter Subject Name:</label>
+                    <input type="text" placeholder="Enter Name" [(ngModel)]="uSubject.subName" name="uSubName"
+                        class="form-control"><br><br>
+
+                    <label for="uSubMarks" class="form-label">Enter Marks:</label>
+                    <input type="text" placeholder="Enter Marks" [(ngModel)]="uSubject.subMarks" name="uSubMarks"
+                        class="form-control"><br><br>
+
+                    <label for="uSubGrade" class="form-label">Enter Grade:</label>
+                    <input type="text" placeholder="Enter Grade" [(ngModel)]="uSubject.subGrade" name="uSubGrade"
+                        class="form-control"><br><br>
+
+                    <!--<label for="uSid" class="form-label">Enter Student ID:</label>
+                    <input type="number" placeholder="Enter Student Id" [(ngModel)]="newSubject.sid" name="uSid"
+                        class="form-control"><br><br>-->
+
+                    <button (click)="update()" type="button" class="btn btn-success btn-sm">Update Student</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

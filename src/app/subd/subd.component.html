@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form>
+
+                <h1>Subject Details</h1>
+
+                <button (click)="getSubject1()" type="button" class="btn btn-secondary btn-sm">Display
+                    Subject</button>
+
+                <div *ngIf="Subject">
+                    <table  class="table table-bordered">
+                        <tr>
+                            <th> Subject ID</th>
+                            <th>Subject Name</th>
+                            <th>Subject Marks</th>
+                            <th>Subject Grade</th>
+                            <th> Student ID</th>
+                        </tr>
+                        <tr *ngFor="let s of Subject">
+                            <td>{{ s.subId }}</td>
+                            <td>{{ s.subName }}</td>
+                            <td>{{ s.subMarks }}</td>
+                            <td>{{s.subGrade}}</td>
+                            <td>{{s.sid}}</td>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

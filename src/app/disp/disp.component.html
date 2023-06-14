@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form>
+                <h1>Student Details</h1>
+                <button (click)="getStudent1()" type="button" class="btn btn-secondary btn-sm">Display Students</button>
+
+                <div *ngIf="Student" class="table table-bordered">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Division</th>
+                            <th>image</th>
+                            
+
+
+                        </tr>
+                        <tr *ngFor="let student of Student">
+                            <td>{{ student.sId }}</td>
+                            <td>{{ student.sName }}</td>
+                            <td>{{ student.sClass }}</td>
+                            <td>{{ student.sDivision }}</td>
+                            <td>{{student.image}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+
+            <form>
+                <h1>Add Student</h1>
+                <div class="form-group">
+                    <label for="sName" class="form-label">Enter Name:</label>
+                    <input type="text" placeholder="Enter Name" [(ngModel)]="newStudent.sName" name="sName"
+                        class="form-control"><br><br>
+
+                    <label for="sClass" class="form-label">Enter Class:</label>
+                    <input type="text" placeholder="Enter Class" [(ngModel)]="newStudent.sClass" name="sClass"
+                        class="form-control"><br><br>
+
+                    <label for="sDivision" class="form-label">Enter Division:</label>
+                    <input type="text" placeholder="Enter Division" [(ngModel)]="newStudent.sDivision"
+                        name="sDivision" class="form-control"><br><br>
+
+
+                        <label for="sDivis" class="form-label">Enter image:</label>
+                        <input type="file" placeholder="Enter image" [(ngModel)]="newStudent.image"
+                            name="sDivision" class="form-control"><br><br>
+
+                    <button (click)="addStudent()" type="button" class="btn btn-success btn-sm">Add Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

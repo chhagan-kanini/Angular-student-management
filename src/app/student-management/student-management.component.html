@@ -1,0 +1,89 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form>
+                    <h1>Student Details</h1>
+                    <button (click)="getStudent1()" type="button" class="btn btn-secondary btn-sm">Display Students</button>
+
+                    <div *ngIf="Student">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Division</th>
+                                <th>image</th>
+                            </tr>
+                            <tr *ngFor="let student of Student">
+                                <td>{{ student.sId }}</td>
+                                <td>{{ student.sName }}</td>
+                                <td>{{ student.sClass }}</td>
+                                <td>{{ student.sDivision }}</td>
+                                <td>{{student.image}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+
+                <form>
+                    <h1>Add Student</h1>
+                    <div class="form-group">
+                        <label for="sName" class="form-label">Enter Name:</label>
+                        <input type="text" placeholder="Enter Name" [(ngModel)]="newStudent.sName" name="sName"
+                            class="form-control"><br><br>
+
+                        <label for="sClass" class="form-label">Enter Class:</label>
+                        <input type="text" placeholder="Enter Class" [(ngModel)]="newStudent.sClass" name="sClass"
+                            class="form-control"><br><br>
+
+                        <label for="sDivision" class="form-label">Enter Division:</label>
+                        <input type="text" placeholder="Enter Division" [(ngModel)]="newStudent.sDivision"
+                            name="sDivision" class="form-control"><br><br>
+
+                            <label for="sDivision" class="form-label">Enter image:</label>
+                            <input type="file" placeholder="Enter image" [(ngModel)]="newStudent.image"
+                                name="sDivision" class="form-control"><br><br>
+    
+                        <button (click)="addStudent()" type="button" class="btn btn-success btn-sm">Add Student</button>
+                    </div>
+                </form>
+
+                <form>
+                    <div class="form-group">
+                        <h1>Delete Student</h1>
+
+                        <input type="number" placeholder="Enter ID" [(ngModel)]="id" name="id"><br><br>
+                        <button (click)="deleteStudent()" type="button" class="btn btn-danger btn-sm">Delete Student</button>
+                    </div>
+                </form>
+
+                <form>
+                    <div class="form-group">
+                        <h1>Update Student</h1>
+                        <label for="uid" class="form-label">Enter ID:</label>
+                        <input type="number" placeholder="Enter ID" [(ngModel)]="uid" name="uid" class="form-control"><br><br>
+
+                        <label for="uName" class="form-label">Enter Name:</label>
+                        <input type="text" placeholder="Enter Name" [(ngModel)]="uStudent.sName" name="uName"
+                            class="form-control"><br><br>
+
+                        <label for="uClass" class="form-label">Enter Class:</label>
+                        <input type="text" placeholder="Enter Class" [(ngModel)]="uStudent.sClass" name="uClass"
+                            class="form-control"><br><br>
+
+                        <label for="uDivision" class="form-label">Enter Division:</label>
+                        <input type="text" placeholder="Enter Division" [(ngModel)]="uStudent.sDivision" name="uDivision"
+                            class="form-control"><br><br>
+
+                            <label for="uDivi" class="form-label">Enter image:</label>
+                            <input type="file" placeholder="Enter image" [(ngModel)]="uStudent.image" name="uDivision"
+                                class="form-control"><br><br>
+    
+                        <button (click)="update()" type="button" class="btn btn-success btn-sm">Update Student</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

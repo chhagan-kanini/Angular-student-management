@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Students with Subjects</h1>
+
+    <button (click)="getStudent1()" class="btn btn-primary">Get Students</button>
+
+    <div *ngIf="Student">
+        <table class="table" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Student class</th>
+                    <th>Student Division</th>
+                    <th>image</th>
+                    <th>Subjects</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of Student">
+                    <td>{{ student.sId }}</td>
+                    <td>{{ student.sName }}</td>
+                    <td>{{ student.sClass }}</td>
+                    <td>{{ student.sDivision }}</td>
+                    <td>{{student.image}}</td>
+                    <td>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Sub_id</th>
+                                <th>Sub_name</th>
+                                <th>Sub_Marks</th>
+                                <th>Grade</th>
+
+                            </tr>
+
+                            <tr *ngFor="let subject of student.subjects">
+
+                                <td>{{ subject.subId }}</td>
+                                <td>{{ subject.subName }}</td>
+                                <td>{{ subject.subMarks }}</td>
+                                <td>{{ subject.subGrade }}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
